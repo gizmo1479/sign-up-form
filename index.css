@@ -1,0 +1,49 @@
+:root {
+  font-size: large;
+}
+
+body {
+  display: flex;
+  align-items: center;
+}
+
+/* LEFT */
+
+.left-container {
+  display: flex;
+  justify-content: center;
+  background-image: url("resources/spenser-sembrat-UvZMA8H2Olk-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.big-text {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 8px;
+}
+
+/* RIGHT */
+.right-container {
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  font-weight: bold;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+form {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 8px;
+}
+
+form label {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+}
