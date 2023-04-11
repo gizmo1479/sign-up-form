@@ -15,31 +15,56 @@
     <div class="right-container">
       <div>
         <p>This isn't a real form, but isn't it darn cool!</p>
+        <p><em>Maybe</em> it should be used for something...</p>
       </div>
       <form>
-        <caption>
-          Sign-up Here!!!
-        </caption>
+        <h3>Sign-up Here!!!</h3>
 
-        <label for="first-name"
-          >First name
-          <input type="text" name="first-name" id="first-name" required />
-        </label>
+        <section class="form-group">
+          <label for="first-name"
+            >First name
+            <input type="text" name="first-name" id="first-name" required />
+          </label>
 
-        <label for="last-name"
-          >Last name
-          <input type="text" name="last-name" id="last-name" required />
-        </label>
+          <label for="last-name"
+            >Last name
+            <input type="text" name="last-name" id="last-name" required />
+          </label>
+        </section>
 
-        <label for="email"
-          >Email
-          <input type="email" name="email" id="email" required />
-        </label>
+        <section class="form-group">
+          <label for="email"
+            >Email
+            <input type="email" name="email" id="email" required />
+          </label>
 
-        <label for="phone-number"
-          >Phone Number
-          <input type="number" name="phone-number" id="phone-number" required />
-        </label>
+          <label for="phone-number"
+            >Phone Number
+            <input
+              type="number"
+              name="phone-number"
+              id="phone-number"
+              required
+            />
+          </label>
+        </section>
+
+        <section class="form-group">
+          <label for="password"
+            >Password
+            <input type="text" name="password" id="password" required />
+          </label>
+
+          <label for="confirm-password"
+            >Confirm Password
+            <input
+              type="text"
+              name="confirm-password"
+              id="confirm-password"
+              required
+            />
+          </label>
+        </section>
       </form>
     </div>
   </body>
