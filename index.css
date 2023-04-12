@@ -1,6 +1,9 @@
 :root {
   font-size: 28px;
   --left-size: 30%;
+  --base-color-bg: rgb(48, 52, 70);
+  --surface1-bg: rgb(81, 87, 109);
+  --text-col: rgb(198, 208, 245);
 }
 
 body {
@@ -10,6 +13,8 @@ body {
   height: 100vh;
   padding: 0px;
   margin: 0px;
+  background-color: var(--base-color-bg);
+  color: var(--text-col);
 }
 
 /* LEFT */
@@ -40,7 +45,6 @@ body {
   width: calc(100% - var(--left-size));
   height: 100%;
   padding: 8px;
-  background-color: rgb(208, 205, 205);
 }
 
 p {
@@ -52,8 +56,8 @@ form {
   display: flex;
   flex-direction: column;
   margin: 8px;
-  background-color: white;
   align-items: center;
+  background-color: var(--surface1-bg);
 }
 
 form label {
