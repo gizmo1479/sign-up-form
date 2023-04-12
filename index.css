@@ -1,9 +1,22 @@
 :root {
-  font-size: 28px;
+  font-size: 32px;
   --left-size: 40%;
+}
+
+:root.light {
+  --base-color-bg: rgb(239, 241, 245);
+  --surface1-bg: rgb(230, 233, 239);
+  --text-col: rgb(76, 79, 105);
+  --overlay0-col: rgb(156, 160, 176);
+  --button-col: rgb(114, 135, 253);
+}
+
+:root.dark {
   --base-color-bg: rgb(48, 52, 70);
   --surface1-bg: rgb(81, 87, 109);
   --text-col: rgb(198, 208, 245);
+  --overlay0-col: rgb(115, 121, 148);
+  --button-col: rgb(186, 187, 241);
 }
 
 body {
@@ -48,15 +61,23 @@ body {
   height: 100%;
 }
 
+.theme-toggle {
+  align-self: flex-end;
+  background-color: var(--button-col);
+  padding: 8px;
+  margin: 8px;
+  border-radius: 8px;
+}
 .right-text {
   font-weight: bold;
   font-family: Georgia, "Times New Roman", Times, serif;
   margin-top: 144px;
   margin-bottom: 36px;
+  margin-left: 32px;
   padding: 16px;
 }
 
-form {
+form .input-area {
   display: flex;
   flex-direction: column;
   padding: 16px;
@@ -68,7 +89,7 @@ form label {
   padding: 8px;
   display: flex;
   flex-direction: column;
-  font-size: 0.7rem;
+  font-size: 0.6rem;
 }
 
 form input {
@@ -78,12 +99,36 @@ form input {
   width: 350px;
 }
 
+form input:focus {
+  border: 2px solid var(--overlay0-col);
+}
+
 form h3 {
-  margin-left: 8px;
+  margin-left: 24px;
 }
 
 .form-group {
   display: flex;
   align-items: center;
   margin: 8px;
+  margin-left: 32px;
+  gap: 32px;
+}
+
+.shadow {
+  height: 10px;
+  background-image: linear-gradient(var(--surface1-bg), var(--base-color-bg));
+}
+
+form button {
+  padding: 16px;
+  background-color: var(--button-col);
+  border-radius: 8px;
+  border: 0px;
+  box-shadow: 2px 2px 4px 2px #d3d2d2;
+  margin-top: 28px;
+  margin-left: 36px;
+  width: 11vw;
+  height: 5vh;
+  font-size: 0.75rem;
 }

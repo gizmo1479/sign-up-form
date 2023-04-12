@@ -13,59 +13,78 @@
     </div>
 
     <div class="right-container">
+      <button class="theme-toggle"">Toggle Me!</button>
       <div class="right-text">
         <p>This isn't a real form, but isn't it darn cool!</p>
         <p><em>Maybe</em> it should be used for something...</p>
       </div>
-      <form>
-        <h3>Sign-up Here!!!</h3>
+      <form method="post">
+        <section class="input-area">
+          <h3>Sign-up Here!!!</h3>
 
-        <section class="form-group">
-          <label for="first-name"
-            >First Name
-            <input type="text" name="first-name" id="first-name" required />
-          </label>
+          <section class="form-group">
+            <label for="first-name"
+              >First Name
+              <input type="text" name="first-name" id="first-name" required />
+            </label>
 
-          <label for="last-name"
-            >Last Name
-            <input type="text" name="last-name" id="last-name" required />
-          </label>
+            <label for="last-name"
+              >Last Name
+              <input type="text" name="last-name" id="last-name" required />
+            </label>
+          </section>
+
+          <section class="form-group">
+            <label for="email"
+              >Email
+              <input type="email" name="email" id="email" required />
+            </label>
+
+            <label for="phone-number"
+              >Phone Number
+              <input
+                type="number"
+                name="phone-number"
+                id="phone-number"
+                required
+              />
+            </label>
+          </section>
+
+          <section class="form-group">
+            <label for="password"
+              >Password
+              <input type="text" name="password" id="password" required />
+            </label>
+
+            <label for="confirm-password"
+              >Confirm Password
+              <input
+                type="text"
+                name="confirm-password"
+                id="confirm-password"
+                required
+              />
+            </label>
+          </section>
         </section>
 
-        <section class="form-group">
-          <label for="email"
-            >Email
-            <input type="email" name="email" id="email" required />
-          </label>
-
-          <label for="phone-number"
-            >Phone Number
-            <input
-              type="number"
-              name="phone-number"
-              id="phone-number"
-              required
-            />
-          </label>
-        </section>
-
-        <section class="form-group">
-          <label for="password"
-            >Password
-            <input type="text" name="password" id="password" required />
-          </label>
-
-          <label for="confirm-password"
-            >Confirm Password
-            <input
-              type="text"
-              name="confirm-password"
-              id="confirm-password"
-              required
-            />
-          </label>
+        <section>
+          <div class="shadow"></div>
+          <button type="submit">Create Account</button>
         </section>
       </form>
     </div>
   </body>
+
+  <script>
+    function setTheme() {
+      const root = document.documentElement;
+      const newTheme = root.className === "dark" ? "light" : "dark";
+      root.className = newTheme;
+    }
+
+    document.querySelector(".theme-toggle").addEventListener("click", setTheme);
+    setTheme();
+  </script>
 </html>
